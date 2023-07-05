@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armonia</title>
+    <!-- Website Icon  -->
+    <link rel="Icon" href="image/">
+
+    <!-- bootstrap Css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- style Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- responsive Css -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- fontawesome Icon -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <!-- Header Section Start ======----- -->
+    <header>
+        <div id="header">
+            <nav class="navbar navbar-expand-lg mx-auto">
+                <div class="container-xxl">
+                    <a class="navbar-brand" href="#"><img src="image/logo.png" class="" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto  mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">ABOUT US</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">COLLECTIONS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">FRANCHISE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">CONSULTATION</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">STORES</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- -----====== Header Section End =====----- -->
+
+
+    <!-- Banner Section Start ======----- -->
+    <section class="banner">
+        <div class="container-xxl p-0">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="image/banner-1.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner-2.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="image/banner-3.png" class="d-block w-100">
+                    </div>
+                </div>
+            </div>
+            <div class="banner-left">
+                <div class="row h-100">
+                    <div class="col-lg-5 banner-text d-flex justify-content-center align-items-center">
+                        <div class="ban-text-box">
+                            <div class="ban-h">Where beautiful home
+                                stories begin</div>
+                            <div class="ban-p">A store that specialises in Home Decor and Gifting ideas</div>
+                            <a class="btn-1">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -----====== Banner Section End =====----- -->
+
+
+    <!-- Collection Section Start ======----- -->
+    <section class="collection">
+        <div class="container-xxl">
+            <div class="th-h1 pb-5 mb-5">
+                Collections
+            </div>
+        </div>
+        <div class="container-xxl">
+            <div class="row justify-content-evenly">
+                <div class="col-3">
+                    <div class="coll-h">Decor & Gifts</div>
+                    <div class="coll-box">
+                        <div class="coll-img-box text-center">
+                            <img src="image/DECOR.png" class="w-100" alt="">
+                            <a href="" class="btn-1">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="coll-h">Furniture</div>
+                    <div class="coll-box">
+                        <div class="coll-img-box text-center">
+                            <img src="image/CHARF.png" class="w-100" alt="">
+                            <a href="" class="btn-1">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="coll-h">Furnishing</div>
+                    <div class="coll-box">
+                        <div class="coll-img-box text-center">
+                            <img src="image/FUENISHING.png" class="w-100" alt="">
+                            <a href="" class="btn-1">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -----====== Collection Section End =====----- -->
+
+
+
+
+
+
+    <!-- Js File Script  -->
+
+    <!-- ========== Bootstrap Js ========== -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- ========== jquery Js ========== -->
+    <script src="js/jquery.js"></script>
+
+    <!-- ========== main Js ========== -->
+    <script src="js/main.js"></script>
+    <script>
+        $(".collection .col-3").eq(0).mouseover(function(){
+            $(".collection").css({'background-color':'#87603C'})
+        })
+        $(".collection .col-3").eq(0).mouseout(function(){
+            $(".collection").css({'background-color':'#ECE3DB'})
+        })
+        $(".collection .col-3").eq(1).mouseover(function(){
+            $(".collection").css({'background-color':'#C0793A'})
+        })
+        $(".collection .col-3").eq(1).mouseout(function(){
+            $(".collection").css({'background-color':'#ECE3DB'})
+        })
+        $(".collection .col-3").eq(2).mouseover(function(){
+            $(".collection").css({'background-color':'#EDCEA9'})
+        })
+        $(".collection .col-3").eq(2).mouseout(function(){
+            $(".collection").css({'background-color':'#ECE3DB'})
+        })
+    </script>
+</body>
+
+</html>
