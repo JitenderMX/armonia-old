@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.product {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.product h2 {
+  margin-top: 0;
+}
+
+.product p {
+  margin: 5px 0;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+}
+  </style>
+</head>
+<body>
+  <div class="product-container" id="productContainer">
+    <!-- Product details will be dynamically populated here -->
+  </div>
+
+  <script>
+    const productsData = [
+  {
+    "Name:": "Product 1",
+    "Description:": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    "Material:": "ABC",
+    "Made in:": "India",
+    "Pair it with:": "Product3",
+    "Measurements:": "Height(cm): 100 | Width(cm): 42 | Depth(cm): 42 | Weight(kg): 2",
+    "Image:": "image-1 | image-2 | image-3"
+  },
+  {
+    "Name:": "Product 2",
+    "Description:": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    "Material:": "SDW",
+    "Made in:": "India",
+    "Pair it with:": "Product4",
+    "Measurements:": "Height(cm): 10 | Width(cm): 43 | Depth(cm): 45 | Weight(kg): 2",
+    "Image:": "image-5 | image-3 | image-4"
+  },
+  {
+    "Name:": "Product 3",
+    "Description:": "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "Material:": "SDA",
+    "Made in:": "India",
+    "Pair it with:": "Product2",
+    "Measurements:": "Height(cm): 10 | Width(cm): 43 | Depth(cm): 42 | Weight(kg): 4",
+    "Image:": "image-6 | image-43 | image-6"
+  },
+  {
+    "Name:": "Product 4",
+    "Description:": "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "Material:": "EWR",
+    "Made in:": "India",
+    "Pair it with:": "Product1",
+    "Measurements:": "Height(cm): 20 | Width(cm): 23 | Depth(cm): 52 | Weight(kg): 4",
+    "Image:": "image-41 | image-2 | image-5"
+  },
+  {
+    "Name:": "Product 5",
+    "Description:": "CSV is a file extension that can store comma separated numeric and alpha numeric data in simple text format. CSV is used while data transferring and it can contain records contained with a lot of fields. Each record has same number of fields.",
+    "Material:": "UND",
+    "Made in:": "India",
+    "Pair it with:": "Product1",
+    "Measurements:": "Height(cm): 40 | Width(cm): 26 | Depth(cm): 52 | Weight(kg): 4",
+    "Image:": "image-1 | image-2 | image-3"
+  }
+];
+
+function displayProducts() {
+  const productContainer = document.getElementById("productContainer");
+
+  productsData.forEach(product => {
+    const productElement = document.createElement("div");
+    productElement.classList.add("product");
+
+    const images = product["Image:"].split(" | ");
+    const imageElement = document.createElement("img");
+    imageElement.src = images[0];
+    productElement.appendChild(imageElement);
+
+    const nameElement = document.createElement("h2");
+    nameElement.textContent = product["Name:"];
+    productElement.appendChild(nameElement);
+
+    const descriptionElement = document.createElement("p");
+    descriptionElement.textContent = product["Description:"];
+    productElement.appendChild(descriptionElement);
+
+    const materialElement = document.createElement("p");
+    materialElement.textContent = `Material: ${product["Material:"]}`;
+    productElement.appendChild(materialElement);
+
+    const madeInElement = document.createElement("p");
+    madeInElement.textContent = `Made in: ${product["Made in:"]}`;
+    productElement.appendChild(madeInElement);
+
+    const pairWithElement = document.createElement("p");
+    pairWithElement.textContent = `Pair it with: ${product["Pair it with:"]}`;
+    productElement.appendChild(pairWithElement);
+
+    const measurementsElement = document.createElement("p");
+    measurementsElement.textContent = product["Measurements:"];
+    productElement.appendChild(measurementsElement);
+
+    productContainer.appendChild(productElement);
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayProducts();
+});
+
+  </script>
+</body>
+</html>
