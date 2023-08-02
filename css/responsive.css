@@ -36,9 +36,10 @@
         width: 100%;
     }
 
-    .nav-item{
+    .nav-item {
         padding-top: 20px;
     }
+
     .navbar img {
         width: 160px;
         transition: all .5s;
@@ -57,26 +58,32 @@
         width: 1.3em;
         height: 1.3em;
     }
+
     .ban-text-box .ban-h {
         font-size: 32px;
         line-height: 40px;
     }
-    #banner .carousel-item{
+
+    #banner .carousel-item {
         min-height: 600px;
     }
+
     .banner-text {
         background: transparent;
         backdrop-filter: blur(5px);
         padding: 70px 30px;
     }
+
     .banner-text .ban-text-box {
         position: relative;
         transform: translateY(100px);
     }
+
     .ban-p {
         font-size: 18px;
         line-height: 25px;
     }
+
     .collection .col-md-3:nth-child(1) {
         transform: translateY(0px);
     }
@@ -178,9 +185,10 @@
         transform: scale(1);
     }
 
-    .management{
+    .management {
         padding: 0;
     }
+
     .manag-box {
         flex-direction: column;
     }
@@ -197,15 +205,19 @@
         font-size: 24px;
         line-height: 30px;
     }
+
     .management .th-big-h {
         margin-bottom: 30px;
     }
-    .manag-text .th-h1{
-font-size: 18px;
+
+    .manag-text .th-h1 {
+        font-size: 18px;
     }
-.manag-text .th-p{
-    font-size: 14px;
-}
+
+    .manag-text .th-p {
+        font-size: 14px;
+    }
+
     /* .manag-tab {
         position: static;
     } */
@@ -217,20 +229,28 @@ font-size: 18px;
     .more-about-right {
         padding: 20px;
     }
-    
-.ft-u-img {
-    width: 65px;
-}
-.tran-space-right{
-    padding: 20px;
-}
-.bread_crumb {
-    padding-bottom: 10px;
-}
-.tran-space-right{
-    overflow:hidden ;
-}
-.consultation-h {
+
+    .ft-u-img {
+        width: 65px;
+    }
+
+    .tran-space-right {
+        padding: 20px;
+    }
+
+    .bread_crumb {
+        padding-bottom: 10px;
+    }
+
+    .tran-space-right {
+        overflow: hidden;
+    }
+
+    .tran-your-space {
+        padding-top: 0;
+    }
+
+    .consultation-h {
         padding-bottom: 0 !important;
     }
 }
