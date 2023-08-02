@@ -1,0 +1,162 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Book Search</title>
+</head>
+<body>
+  <input type="text" id="searchInput" placeholder="Enter book title">
+  <button onclick="searchBooks()">Search</button>
+  <ul id="results"></ul>
+
+  <script>
+    const library = [
+      { title: "JavaScript: The Good Parts", author: "Douglas Crockford" },
+      { title: "Eloquent JavaScript", author: "Marijn Haverbeke" },
+      { title: "You Don't Know JS", author: "Kyle Simpson" },
+      { title: "Learning Web Design", author: "Jennifer Niederst Robbins" }
+    ];
+
+    function searchBooks() {
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      const resultsContainer = document.getElementById("results");
+      resultsContainer.innerHTML = "";
+
+      const matchingBooks = library.filter(book => book.title.toLowerCase().includes(searchQuery));
+
+      if (matchingBooks.length === 0) {
+        resultsContainer.innerHTML = "No matching books found.";
+      } else {
+        matchingBooks.forEach(book => {
+          const listItem = document.createElement("li");
+          listItem.textContent = book.title + " by " + book.author;
+          resultsContainer.appendChild(listItem);
+        });
+      }
+    }
+  </script>
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Search</title>
+</head>
+<body>
+  <input type="text" id="searchInput" placeholder="Enter book title">
+  <button onclick="searchBooks()">Search</button>
+  <ul id="results"></ul>
+
+  <script>
+    const library = [
+      { title: "JavaScript: The Good Parts", author: "Douglas Crockford" },
+      { title: "Eloquent JavaScript", author: "Marijn Haverbeke" },
+      { title: "You Don't Know JS", author: "Kyle Simpson" },
+      { title: "Learning Web Design", author: "Jennifer Niederst Robbins" }
+    ];
+
+    // Add event listener for "keypress" event on the input field
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+      if (event.key === "Enter" || event.keyCode === 13) {
+        searchBooks();
+      }
+    });
+
+    function searchBooks() {
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      const resultsContainer = document.getElementById("results");
+      resultsContainer.innerHTML = "";
+
+      const matchingBooks = library.filter(book => book.title.toLowerCase().includes(searchQuery));
+
+      if (matchingBooks.length === 0) {
+        resultsContainer.innerHTML = "No matching books found.";
+      } else {
+        matchingBooks.forEach(book => {
+          const listItem = document.createElement("li");
+          listItem.textContent = book.title + " by " + book.author;
+          resultsContainer.appendChild(listItem);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #searchInput {
+      padding: 5px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-right: 5px;
+    }
+    #results {
+      list-style: none;
+      padding: 0;
+    }
+    #results li {
+      margin-bottom: 5px;
+    }
+    #searchButton {
+      padding: 5px 10px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #searchButton:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="searchInput" placeholder="Enter book title">
+  <button id="searchButton" onclick="searchBooks()">Search</button>
+  <ul id="results"></ul>
+
+  <script>
+    const library = [
+      { title: "JavaScript: The Good Parts", author: "Douglas Crockford" },
+      { title: "Eloquent JavaScript", author: "Marijn Haverbeke" },
+      { title: "You Don't Know JS", author: "Kyle Simpson" },
+      { title: "Learning Web Design", author: "Jennifer Niederst Robbins" }
+    ];
+
+    document.getElementById("searchInput").addEventListener("keypress", function(event) {
+      if (event.key === "Enter" || event.keyCode === 13) {
+        searchBooks();
+      }
+    });
+
+    function searchBooks() {
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      const resultsContainer = document.getElementById("results");
+      resultsContainer.innerHTML = "";
+
+      const matchingBooks = library.filter(book => book.title.toLowerCase().includes(searchQuery));
+
+      if (matchingBooks.length === 0) {
+        resultsContainer.innerHTML = "No matching books found.";
+      } else {
+        matchingBooks.forEach(book => {
+          const listItem = document.createElement("li");
+          listItem.textContent = book.title + " by " + book.author;
+          resultsContainer.appendChild(listItem);
+        });
+      }
+    }
+  </script>
+</body>
+</html>
+

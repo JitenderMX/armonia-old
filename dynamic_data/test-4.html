@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML: Add a container where the text will be displayed -->
+<div id="textContainer"></div>
+
+
+
+  <!-- Add the script tag for jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // JavaScript/jQuery code to separate the text
+$(document).ready(function () {
+    $(window).on('load', function(){
+        const text = "image-1, image-2, image-3";
+  const parts = text.split(", ");
+
+  const $container = $("#textContainer");
+
+  // Loop through the text parts and create separate span elements for each
+  for (let i = 0; i < parts.length; i++) {
+    const $spanElement = $("<span>").text(parts[i]);
+
+    // Add some styling to each text part (optional)
+    $spanElement.css("margin-right", "10px");
+
+    // Append the span element to the container
+    $container.append($spanElement);
+
+    // Check if it's not the last text part
+    if (i !== parts.length - 1) {
+      const $separatorSpan = $("<span>, </span> <br>");
+
+      // Add some styling to the separator (optional)
+      $separatorSpan.css("margin-right", "10px");
+
+      // Append the separator span element to the container
+      $container.append($separatorSpan);
+    }
+  }
+
+    })
+
+
+});
+
+</script>
+</body>
+</html>
