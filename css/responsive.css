@@ -230,12 +230,9 @@ font-size: 18px;
 .tran-space-right{
     overflow:hidden ;
 }
-.franch-testimonal{
-    padding-top: 0 !important;
-}
-.consultation-h{
-    padding-bottom: 0 !important;
-}
+.consultation-h {
+        padding-bottom: 0 !important;
+    }
 }
 
 
