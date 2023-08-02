@@ -231,11 +231,11 @@ font-size: 18px;
     overflow:hidden ;
 }
 .franch-testimonal{
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 .consultation-h{
-    padding-bottom: 0;
-}   
+    padding-bottom: 0 !important;
+}
 }
 
 
