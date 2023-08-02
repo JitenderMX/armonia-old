@@ -227,7 +227,9 @@ font-size: 18px;
 .bread_crumb {
     padding-bottom: 10px;
 }
-
+.tran-space-right{
+    overflow:hidden ;
+}
 }
 
 
