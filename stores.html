@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armonia | Stores</title>
+    <!-- Website Icon  -->
+    <link rel="Icon" href="image/">
+
+    <!-- bootstrap Css -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- style Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- responsive Css -->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- fontawesome Icon -->
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet" />
+    <!-- <script src="https://kit.fontawesome.com/a4b6d6cce1.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.0/css/all.css"> -->
+</head>
+
+<body>
+
+    <div id="top"></div>
+
+    <!-- Header Section Start ======----- -->
+    <div id="load-header">
+
+    </div>
+
+    <!-- -----====== Header Section End =====----- -->
+
+    <!-- Store Head Section Start ======----- -->
+    <section class="store-h mt-4 pb-0">
+        <div class="container-xxl p-0">
+            <div class="row align-items-end justify-content-between">
+                <div class="col-md-7 mt-3 ">
+                    <div class="store-text">
+                        <div class="th-h1">Select the store</div>
+                        <!-- <p class="mb-0"><span>or </span><span class="text-decoration-underline">Locate a store nearby
+                            </span></p> -->
+                    </div>
+                </div>
+                <div class="col-md-5  mt-3 text-end p-0 p-md-2">
+                    <div class="store-search-box">
+                        <div class="d-flex align-items-center">
+                            <div class="icon me-2"><i class="fal fa-search ms-0" id="btnSearch"></i></div>
+                            <input type="text" name="" id="searchInput" placeholder="Search" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -----====== Store Head Section End =====----- -->
+
+
+    <!-- Store Location Section Start ======----- -->
+    <section class="store-loc p-md-5">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-md-4 p-0">
+                    <div class="store-loc-tab mb-3 m-md-0 d-inline-block">
+                        <div class="store-loc-btn d-md-none">
+                            <div class="sl-text">DELHI</div>
+                            <div class="sl-icon"><i class="fas fa-angle-down"></i></div>
+                        </div>
+                        <ul class="list-unstyled store-loc-list">
+                            <li class="loc-tab">
+                                <div class="loc-tab-btn active" data-city="delhi">DELHI</div>
+                            </li>
+                            <li class="loc-tab">
+                                <div class="loc-tab-btn" data-city="mumbai">Mumbai</div>
+                            </li>
+                            <li class="loc-tab">
+                                <div class="loc-tab-btn" data-city="pune">PUNE</div>
+                            </li>
+                            <li class="loc-tab">
+                                <div class="loc-tab-btn" data-city="amritsar">AMRITSAR</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-8 p-0">
+                    <div class="store-loc-container" id="cityList">
+                        <!-- <div class="loc-box"><img src="image/store/store-1.png" class="img-fluid" alt="">
+                            <a href="https://goo.gl/maps/zcjv7YQkL2ni2QDF8" target="_blank">ARMONIA HOME  DELHI - LOCATION 1 STORE</a></div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- -----====== Store Location Section End =====----- -->
+
+
+
+
+
+
+    <!--  Footer Section Start ======----- -->
+    <footer id="footer">
+
+    </footer>
+
+    <!-- -----======  Footer Section End =====----- -->
+
+
+
+
+
+    <!-- Js File Script  -->
+
+    <!-- ========== Bootstrap Js ========== -->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- ========== jquery Js ========== -->
+    <script src="js/jquery.js"></script>
+
+    <!-- ========== main Js ========== -->
+    <script src="js/main.js"></script>
+
+    <script src="js/store.js"></script>
+    <script>
+        
+        $(".store-loc-btn").click(function(){
+            $(this).toggleClass("active");
+            $(this).next().slideToggle();
+        })
+    </script>
+</body>
+
+</html>
