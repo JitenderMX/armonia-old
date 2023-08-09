@@ -1,0 +1,1373 @@
+/* 01. Custom Font Start ------------------------------ */
+@font-face {
+    font-family: 'Larken DEMO';
+    src: url('../fonts/LarkenDEMO-Thin.eot');
+    src: url('../fonts/LarkenDEMO-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/LarkenDEMO-Thin.woff2') format('woff2'),
+        url('../fonts/LarkenDEMO-Thin.woff') format('woff'),
+        url('../fonts/LarkenDEMO-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Karbon';
+    src: url('../fonts/Karbon-Regular.eot');
+    src: url('../fonts/Karbon-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Karbon-Regular.woff2') format('woff2'),
+        url('../fonts/Karbon-Regular.woff') format('woff'),
+        url('../fonts/Karbon-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ------------- Google Font End ------------- */
+
+
+/* 02.base Start ------------------------------ */
+:root {
+    --th-color-1: #F1EAE4;
+    --th-color-2: #ECDCDB;
+    --th-color-3: #FFFEFB;
+    --th-color-4: #EDCEA9;
+    --th-color-5: #C0793A;
+    --th-color-6: #87603C;
+    --th-black: #202020;
+    --th-font-1: 'Larken DEMO';
+    --th-font-2: 'Karbon';
+}
+
+body {
+    background-color: #ECE3DB;
+}
+
+.th-h1 {
+    color: var(--th-black);
+    font-size: 45px;
+    font-family: var(--th-font-1);
+    font-style: normal;
+    font-weight: 100;
+    line-height: 61.716px;
+}
+
+.th-big-h {
+    color: var(--th-black);
+    font-family: var(--th-font-1);
+    font-size: 100px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 32.776px;
+}
+
+.th-p {
+    color: #000;
+    font-size: 25px;
+    font-family: var(--th-font-2);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26px;
+}
+
+.btn-1 {
+    display: inline-block;
+    padding: 5px 25px;
+    background-color: transparent;
+    border: 1px solid var(--th-black);
+    color: var(--th-black);
+    font-size: 20px;
+    font-family: var(--th-font-1);
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .5s;
+    position: relative;
+    z-index: 1;
+}
+
+.btn-1:hover {
+    color: var(--th-color-1);
+}
+
+.btn-1::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background-color: var(--th-black);
+    color: var(--th-color-1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+
+.btn-1:hover:after {
+    width: 100%;
+}
+
+section {
+    padding: 100px 0;
+}
+
+.left-to-right {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.left-to-right::after,
+.left-to-right::before {
+    content: " ";
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    background-color: var(--th-color-3);
+    transition: all 2s;
+}
+
+.left-to-right::before {
+    top: 0;
+}
+
+.left-to-right::after {
+    bottom: 0;
+}
+
+.left-to-right.active::after,
+.left-to-right.active::before {
+    width: 100%;
+}
+
+
+.top-to-bottom {
+    position: relative;
+}
+
+.top-to-bottom::after,
+.top-to-bottom::before {
+    content: " ";
+    width: 1px;
+    height: 0%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--th-color-3);
+    transition: all 2s;
+}
+
+/* .top-to-bottom::before {
+    left: 0;
+  }
+  .top-to-bottom::after {
+    right: 0;
+  } */
+.top-to-bottom.active::after,
+.top-to-bottom.active::before {
+    height: 100%;
+}
+
+/* ------------- base End ------------- */
+
+
+/* 03. Header Scetion Start ------------------------------ */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(2px);
+    transition: all .5s;
+}
+
+#header {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto !important;
+}
+
+.navbar .navbar-brand {
+    padding: 0;
+}
+
+.navbar img {
+    width: 210px;
+    transition: all .5s;
+}
+
+.navbar .container-xxl {
+    align-items: end;
+}
+
+.nav-link {
+    color: var(--th-black);
+    font-size: 18px;
+    font-family: var(--th-font-1);
+    font-weight: 300;
+    line-height: 25.6px;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding: 0;
+    position: relative;
+    transition: all .5s;
+}
+
+.nav-link:hover {
+    color: var(--th-black);
+}
+
+.nav-link::after {
+    content: " ";
+    background-color: var(--th-black);
+    width: 0%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .5s;
+}
+
+.nav-link:hover:after {
+    width: 100%;
+}
+
+/* ------------- Header Scetion  End ------------- */
+
+/* 04. Banner Scetion Start ------------------------------ */
+section.banner {
+    padding: 0 0;
+}
+
+.banner .container-xxl {
+    position: relative;
+}
+
+.banner-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+}
+#banner .carousel-item{
+    min-height: 750px;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#banner .carousel-item:nth-child(1){
+    background-image: url(../image/banner-1.png);
+}
+#banner .carousel-item:nth-child(2){
+    background-image: url(../image/banner-2.png);
+}
+#banner .carousel-item:nth-child(3){
+    background-image: url(../image/banner-3.png);
+}
+
+.banner-text {
+    height: 100% !important;
+    background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(8.5px);
+    padding: 0 70px;
+}
+
+.ban-text-box .ban-h {
+    color: var(--th-black);
+    font-size: 60px;
+    font-family: var(--th-font-1);
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: 1.95px;
+}
+
+.ban-p {
+    color: var(--th-black);
+    text-shadow: 0px 4px 16px 0px rgba(236, 227, 219, 0.20);
+    font-size: 25px;
+    font-family: var(--th-font-2);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0.75px;
+    margin-top: 26px;
+}
+
+.banner-text .ban-text-box {
+    position: relative;
+    transform: translateY(100px);
+}
+
+.banner-text .btn-1 {
+    margin-top: 35px;
+}
+
+/* ------------- Banner Scetion  End ------------- */
+
+
+/* 05. Collection Scetion Start ------------------------------ */
+.collection {
+    transition: all .5s;
+}
+
+.collection .row {
+    margin-bottom: 100px;
+}
+
+.coll-h {
+    color: #000;
+    font-size: 28px;
+    font-family: var(--th-font-1);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.coll-box {
+    overflow: hidden;
+    position: relative;
+}
+
+.coll-box .btn-1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.collection .col-3 {
+    cursor: pointer;
+}
+
+.collection .col-md-3:nth-child(1) {
+    transform: translateY(50px);
+}
+
+.collection .col-3:nth-child(2) {
+    /* transform: translateY(-40px); */
+}
+
+.collection .col-md-3:nth-child(3) {
+    transform: translateY(50px);
+}
+
+.coll-box img {
+    transition: all .6s;
+    transform: scale(1);
+}
+
+.coll-box:hover img {
+    transform: scale(1.3);
+}
+
+.coll-box:hover .btn-1 {
+    transform: translate(-50%, -150%);
+    opacity: 100;
+    transition: all .5s;
+}
+
+/* ------------- Collection Scetion  End ------------- */
+
+/* 06. Hotspot Scetion Start ------------------------------ */
+.hotspot {
+    padding-bottom: 30px;
+}
+
+.hotspot-text {
+    padding: 0 50px;
+}
+
+.story-text {
+    margin-top: 50px;
+}
+
+.story-text .th-h1 {
+    text-align: left !important;
+}
+
+.story-text .th-p {
+    margin-top: 10px;
+}
+
+.story-text .story-h,
+.h-pro-text .story-h {
+    color: #202020;
+    font-size: 35px;
+    font-family: var(--th-font-2);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.h-pro-text .story-h {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+
+.hotspot-img {
+    position: relative;
+}
+
+.hotspot-img {
+    overflow: hidden;
+}
+
+.hotspot-img img {
+    width: 723px;
+}
+
+#hotspot-1 .hotspot-img .far {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: rgba(84, 119, 57, 0.80);
+    color: #ECE3DB;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translate(175px, 90px);
+    transition: all .5s;
+}
+
+#hotspot-1 .hotspot-img .far:nth-child(2) {
+    transform: translate(340px, 200px);
+
+}
+
+#hotspot-1 .hotspot-img .far:nth-child(3) {
+    transform: translate(500px, 300px);
+}
+
+#hotspot-2 .hotspot-img .far {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: rgba(84, 119, 57, 0.80);
+    color: #ECE3DB;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translate(220px, 90px);
+}
+
+#hotspot-2 .hotspot-img .far:nth-child(2) {
+    transform: translate(170px, 320px);
+
+}
+
+#hotspot-2 .hotspot-img .far:nth-child(3) {
+    transform: translate(500px, 310px);
+}
+
+#hotspot-3 .hotspot-img .far {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: rgba(84, 119, 57, 0.80);
+    color: #ECE3DB;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translate(350px, 140px);
+}
+
+#hotspot-3 .hotspot-img .far:nth-child(2) {
+    transform: translate(130px, 320px);
+
+}
+
+#hotspot-3 .hotspot-img .far:nth-child(3) {
+    transform: translate(600px, 180px);
+}
+
+.common-slider .carousel-control-next,
+.common-slider .carousel-control-prev {
+    width: auto;
+    align-items: end;
+    margin: 0 20px;
+    transform: translateY(20px);
+}
+
+.common-slider .carousel-control-next .far,
+.common-slider .carousel-control-prev .far {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50%;
+    color: var(--th-black) !important;
+    transition: all .5s;
+}
+
+.common-slider .carousel-control-next .far:hover,
+.common-slider .carousel-control-prev .far:hover {
+    background-color: var(--th-black);
+    color: var(--th-color-1) !important;
+}
+
+/* ------------- Hotspot Scetion  End ------------- */
+
+/* 07. Armonia_franchise_awaits Scetion Start ------------------------------ */
+.armonia_franchise_awaits {
+    background-color: var(--th-color-3);
+}
+
+.armonia_franchise_awaits .btn-1 {
+    margin-top: 40px;
+}
+
+.armonia_franchise_awaits .carousel-indicators {
+    position: absolute;
+    top: 105%;
+    right: -100%;
+}
+
+.armonia_franchise_awaits .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+}
+
+.armonia_franchise_awaits .carousel-indicators button.active {
+    background-color: var(--th-color-5);
+}
+
+/* ------------- Armonia_franchise_awaits Scetion  End ------------- */
+
+/* 08. Alevate Space Scetion Start ------------------------------ */
+.elevate_space .elevate_space_img {
+    background-color: var(--th-color-3);
+    position: relative;
+    /* transform: translateY(-20px); */
+}
+
+
+.elevate_space .elevate_space_text {
+    padding: 90px;
+}
+
+.elevate_space_text .th-p {
+    margin-top: 28px;
+}
+
+.elevate_space_text .btn-1 {
+    margin-top: 32px;
+}
+
+.elevate_space .th-h1 {
+    line-height: 50px;
+}
+
+/* ------------- Alevate Space Scetion  End ------------- */
+
+/* 09.Testimonal Scetion Start ------------------------------ */
+.testimonal {
+    /* background-color: var(--th-color-3); */
+    position: relative;
+}
+
+/* .testimonal::after {
+    content: " ";
+    width: 100%;
+    height: 40%;
+    background-color: var(--th-color-3);
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.testimonal .th-h1 {
+    margin-bottom: 50px;
+    color: var(--th-color-3);
+
+}
+
+.testimonal .col-md-5,
+.testimonal .col-12 {
+    padding: 50px 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonal .th-p {
+    font-size: 22px;
+}
+
+.testimonal .col-md-5 {
+    background-color: var(--th-color-6);
+}
+
+.testimonal .col-md-5 .th-p {
+    color: var(--th-color-3);
+}
+
+.testimonal .col-12:nth-child(1) {
+    background-color: var(--th-color-5);
+}
+.testimonal .col-12:nth-child(2) {
+    background-color: var(--th-color-1);
+}
+
+.testimonal .col-12:nth-child(3) {
+    background-color: var(--th-color-4);
+}
+
+/* ------------- Testimonal Scetion  End ------------- */
+
+/* 10.Footer Scetion Start ------------------------------ */
+.footer {
+    background-color: var(--th-black);
+    padding-bottom: 0px;
+}
+
+.footer .th-p {
+    color: var(--th-color-2);
+    margin-bottom: 80px;
+}
+
+.footer ul {
+    list-style-type: none;
+}
+
+.footer li a {
+    color: var(--th-color-2);
+    font-family: var(--th-font-2);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.footer img {
+    margin-top: 130px;
+}
+
+.mediax a {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* ------------- Footer Scetion  End ------------- */
+
+/* ------------------------------ About-Us Page Start ------------------------------ */
+
+
+/* 1.Intro Video Scetion Start ------------------------------ */
+.intro-video {
+    padding: 100px 0 60px 0;
+}
+
+.intro-text-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 32, 32, 0.503);
+}
+
+.intro-text-box .th-h1 {
+    color: var(--th-color-1);
+    font-family: var(--th-font-2);
+    font-size: 89.208px;
+    font-weight: 600;
+    line-height: 105.551px;
+    text-transform: uppercase;
+}
+
+/* ------------- Intro Video Scetion  End ------------- */
+
+/* 2. Mission Scetion Start ------------------------------ */
+.mission {
+    background-color: var(--th-color-3);
+    padding: 0;
+}
+
+.mission .th-p {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.mission img {
+    margin-top: 20px;
+}
+
+.mission .mission-text {
+    background-color: var(--th-color-6);
+}
+
+.mission .mission-heading {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--th-font-1);
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: 60px;
+    letter-spacing: 5.5px;
+}
+
+.mission-text {
+    padding: 70px 0;
+    position: relative;
+    transform: translateX(-100%);
+    transition: all .5s;
+}
+
+.mission-img {
+    padding: 70px;
+}
+
+.mission-img img {
+    transition: all .5s;
+    transform: scale(-0.7);
+}
+
+/* -------------  Mission Scetion  End ------------- */
+
+/* 3. Over-year Scetion Start ------------------------------ */
+.over-year-slider img {
+    width: 90%;
+}
+
+/* -------------  Over-year Scetion  End ------------- */
+
+/* 4. Management Scetion Start ------------------------------ */
+.management-box {
+    transition: all .5s;
+}
+
+.management .th-big-h {
+    margin-bottom: 100px;
+}
+
+.management .th-h1 {
+    transition: all .5s;
+}
+
+.management .th-p {
+    transition: all .5s;
+}
+
+.manag-box {
+    display: flex;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+
+/* .manag-tab:nth-child(1) {
+    background-color: #C0793A !important;
+}
+.manag-tab:nth-child(2) {
+    background-color: #E3BA50 !important;
+}
+.manag-tab:nth-child(3) {
+    background-color: #EDCEA9 !important;
+} */
+.manag-right{
+    height: 100%;
+}
+.manag-tab {
+position: absolute;
+top: 0;
+left: 0;
+height: inherit;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.manag-box img {
+    filter: grayscale(100%);
+    transition: all .5s;
+}
+
+.manag-box.active-hide {
+    opacity: 0;
+}
+
+.manag-box.active img {
+    filter: grayscale(0%);
+}
+
+/* 
+.manag-box.active .th-h1 {
+    color: var(--th-color-3);
+} */
+
+/* .manag-box.active .th-p {
+    color: var(--th-color-3);
+}
+.manag-tab .th-p{
+color: var(--th-color-3);
+} */
+.manag-right {
+    position: relative;
+}
+
+
+
+/* -------------  Management Scetion  End ------------- */
+
+/* 5. More-About Scetion Start ------------------------------ */
+.more-about {
+    background-color: var(--th-color-3);
+}
+.more-about-right {
+    padding: 50px;
+}
+
+/* -------------  More-About Scetion  End ------------- */
+
+
+/* 6. Media Scetion Start ------------------------------ */
+.media .th-h1 {
+    color: #202020;
+    font-family: var(--th-font-2);
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 32.776px;
+    margin-bottom: 20px;
+}
+
+.media .th-p {
+    font-size: 22px;
+}
+
+.media-box {
+    border-bottom: var(--th-black) solid 2px;
+    padding: 50px 0;
+}
+
+/* -------------  Media Scetion  End ------------- */
+
+
+
+
+
+/* ------------------------------ FRANCHISE Page Start ------------------------------ */
+
+/* 1.Faq Scetion Start ------------------------------ */
+.faq-tab {
+    border-top: 2px solid var(--th-black);
+    border-bottom: 2px solid var(--th-black);
+    margin: 0 0 20px 0;
+    padding: 20px;
+}
+
+.faq-tab {
+    /* transition: all .5s; */
+
+}
+
+.faq-tab .th-p {
+    padding: 20px;
+    /* transition: all .5s; */
+}
+
+.faq-tab span:nth-child(1) {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.faq-tab span:nth-child(2) {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.faq-tab .fa-caret-circle-down {
+    color: var(--th-black);
+    font-size: 25px;
+    /* transition: all .5s; */
+}
+
+/* ------------- Faq Scetion  End ------------- */
+
+/* 3.Franchise Testimonials Scetion Start ------------------------------ */
+.franch-testimonal {
+    background: #ECE3DB;
+}
+
+.ft-u-img {
+    width: 90px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translate(-30%, 30%);
+}
+
+/* ------------- Franchise Testimonials Scetion  End ------------- */
+
+
+/* 4.Franchise Option Scetion Start ------------------------------ */
+.franchise-option {
+    background: #ECE3DB;
+}
+
+.franchise-option .img-top {
+    text-align: center;
+}
+
+.franchise-option .img-bottom {
+    margin-top: 20px;
+}
+
+.franchise-option .img-top img {
+    width: 160px;
+}
+
+.option-left {
+    background-color: var(--th-color-6);
+    padding: 20px;
+}
+
+.option-right {
+    background-color: var(--th-color-5);
+    padding: 20px;
+}
+
+/* ------------- Franchise Option Scetion  End ------------- */
+
+/* 5.Contact Scetion Start ------------------------------ */
+.contact {
+    background-image: url(../image/contact.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.contact .th-h1 {
+    color: #F1EAE4;
+}
+
+.contact .th-p {
+    color: #F1EAE4;
+    /* margin-bottom: 30px; */
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    color: #F1EAE4;
+    font-family: var(--th-font-2);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    border: none;
+    border-bottom: solid 1px #F1EAE4;
+    background-color: transparent;
+    margin-top: 40px;
+}
+
+.contact input:focus {
+    border: none;
+}
+
+.contact textarea {
+    border: solid 1px #F1EAE4;
+    padding: 10px;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #F1EAE4;
+}
+
+.contact .btn-1 {
+    color: #F1EAE4;
+    border: solid #F1EAE4 1px;
+}
+
+/* ------------- Contact Scetion  End ------------- */
+
+
+.tran-space-right {
+    padding: 100px;
+    position: relative;
+}
+
+#tran-space-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    z-index: -1;
+}
+
+.tran-space-text {
+    text-align: center;
+    background-color: var(--th-color-1);
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ------------------------------ Categord Page Start ------------------------------ */
+
+/* 1.Bread Crumb Scetion Start ------------------------------ */
+.bread_crumb {
+    padding-bottom: 50px;
+}
+
+#bread_crumb {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 28.8px;
+    letter-spacing: 2.16px;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+
+#bread_crumb div {
+    display: inline-block;
+}
+
+/* ------------- Bread Crumb Scetion  End ------------- */
+
+
+/* 2.Category Scetion Start ------------------------------ */
+.main-category {
+    padding-top: 0px;
+    border: var(--th-black) solid 1px;
+}
+
+.main-category a {
+    text-decoration: none;
+}
+
+.main-category .row>.col-3 {
+    padding: 30px;
+    border-right: var(--th-black) solid 1px;
+}
+
+.category-tabs ul {
+    list-style: none;
+    display: inline-block;
+}
+
+.category-tabs li {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28.8px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    position: relative;
+    /* display: block; */
+    cursor: pointer;
+}
+
+.category-tabs li::after {
+    content: " ";
+    width: 0%;
+    height: 1px;
+    background-color: var(--th-black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .5s;
+}
+
+.category-tabs li.active::after {
+    width: 100%;
+}
+
+/* ------------- Category Scetion  End ------------- */
+
+/* 3.Product Scetion Start ------------------------------ */
+.product-box {
+    height: 100%;
+    padding: 40px;
+    border: var(--th-black) solid 1px;
+}
+
+.product-img img {
+    border: var(--th-black) solid 8px;
+}
+
+.product-text {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28.8px;
+    letter-spacing: 1.92px;
+}
+
+.product-text .pro-name {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.product-text .pro-des {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* ------------- Product Scetion  End ------------- */
+
+
+
+/* ------------------------------ Product Page Start ------------------------------ */
+/* 1.Main Product Scetion Start ------------------------------ */
+.main-product a {
+    text-decoration: none;
+    color: #000;
+}
+
+.product-details table tr {
+    margin-bottom: 20px !important;
+}
+
+.product-slider {
+    border: var(--th-black) solid 8px;
+}
+
+.main-product .carousel-control-next,
+.main-product .carousel-control-prev {
+    width: auto;
+    align-items: end;
+    margin: 0 20px;
+    transform: translateY(-20px);
+    color: rgb(233, 233, 233) !important;
+}
+
+.main-product .carousel-control-next .fal,
+.main-product .carousel-control-prev .fal {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 50%;
+    background-color: #E7E1D3;
+    color: white !important;
+    transition: all .5s;
+}
+
+.p-des {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    /* 100% */
+    letter-spacing: 0.5px;
+}
+
+.p-pair,
+.p-pair a {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.p-pair a {
+    text-decoration: underline;
+}
+
+.p-name {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28.8px;
+    /* 52.364% */
+    letter-spacing: 4.4px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.p-consult,
+.p-consult a {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 44px;
+    /* 100% */
+    letter-spacing: 3.52px;
+    margin-top: 80px;
+}
+
+.p-consult a {
+    text-decoration: underline;
+}
+
+.also-view-h {
+    color: var(--th-black);
+    font-family: var(--th-black);
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28.8px;
+    /* 106.667% */
+    letter-spacing: 2.16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* .main-product .carousel-control-next .fal:hover,
+.main-product .carousel-control-prev .fal:hover {
+    color: var(--th-color-1) !important;
+} */
+/* ------------- Main Product Scetion  End ------------- */
+
+
+/* ----==== Store Page Start 
+------------------------------ */
+.store-search-box {
+    background-color: var(--th-black);
+    border-radius: 50px;
+    padding: 10px 14px;
+    display: inline-block;
+}
+
+.store-search-box .store-text p span {
+    color: var(--th-black);
+    font-family: var(--th-font-2);
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 24px;
+    /* 104.348% */
+}
+
+.store-search-box .fa-search {
+    color: var(--th-color-2);
+    margin-left: 14px;
+}
+
+.store-search-box input {
+    color: var(--th-color-2);
+    background-color: transparent;
+    border: none;
+}
+
+
+.store-loc .loc-tab {
+    padding: 25px 20px;
+}
+
+.store-loc-tab, .category-tabs{
+position: sticky;
+top: 80px;
+}
+.category-tabs-btn{
+    display: flex;
+    justify-content: space-between;
+}
+.store-loc .loc-tab .loc-tab-btn, .store-loc-btn, .category-tabs-btn {
+    color: #000;
+    font-family: var(--th-font-1);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid var(--th-black);
+    padding: 4px 20px;
+    text-align: center;
+    transition: all .5s;
+    cursor: pointer;
+}
+.store-loc .loc-tab .loc-tab-btn:hover {
+    background-color: var(--th-black);
+    color: var(--th-color-2);
+}
+
+.store-loc .loc-tab .loc-tab-btn.active {
+    background-color: var(--th-black);
+    color: var(--th-color-2);
+}
+
+.loc-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.loc-box img{
+    margin-bottom: 20px;
+}
+.loc-box a {
+    color: #000;
+    font-family: var(--th-font-2);
+    font-size: 21.026px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21.026px;
+    /* 100% */
+    text-decoration-line: underline;
+}
+.store-loc-btn{
+    padding:10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.store-loc-btn:hover{
+    background-color: var(--th-black);
+    color: var(--th-color-2);
+}
+.store-loc-btn.active{
+    border: 1px solid var(--th-color-1);
+    background-color: var(--th-black);
+    color: var(--th-color-2);
+}
+
+/* ------------- Store Page End ------------- */

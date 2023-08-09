@@ -1,0 +1,363 @@
+/* Extra large devices (1200px and down) */
+
+@media screen and (max-width: 1200px) {}
+
+
+/* Large devices (992px and down) */
+
+@media screen and (max-width: 992px) {
+    .nav-link {
+        font-size: 16px;
+        letter-spacing: 1px;
+        margin: 0 !important;
+    }
+}
+
+
+/* Medium devices (768px and down) */
+
+@media screen and (max-width: 768px) {
+    .th-h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .th-big-h {
+        font-size: 50px;
+        line-height: 32.776px;
+    }
+
+    .th-p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .btn-1 {
+        padding: 5px 18px;
+        font-size: 18px;
+        color: var(--th-color-1);
+    }
+
+    .btn-1::after {
+        width: 100%;
+    }
+
+    header {
+        background: #202020;
+    }
+
+    .nav-link {
+        color: var(--th-color-1);
+    }
+
+    .nav-link:hover {
+        color: var(--th-color-1);
+    }
+
+    .nav-link::after {
+        background-color: var(--th-color-1);
+    }
+
+    .nav-item {
+        padding-top: 20px;
+    }
+
+    .navbar img {
+        width: 160px;
+        transition: all .5s;
+    }
+
+    .navbar .container-xxl {
+        align-items: center;
+    }
+
+    .navbar-toggler {
+        border: none;
+        padding: 0;
+    }
+
+    .navbar-toggler-icon {
+        width: 1.3em;
+        height: 1.3em;
+    }
+
+    .ban-text-box .ban-h {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    #banner .carousel-item {
+        min-height: 600px;
+    }
+
+    .banner-text {
+        background: transparent;
+        backdrop-filter: blur(5px);
+        padding: 70px 30px;
+    }
+
+    .banner-text .ban-text-box {
+        position: relative;
+        transform: translateY(100px);
+    }
+
+    .ban-p {
+        font-size: 18px;
+        line-height: 25px;
+    }
+
+    .collection .col-md-3:nth-child(1) {
+        transform: translateY(0px);
+    }
+
+    .collection .col-3:nth-child(2) {
+        /* transform: translateY(-40px); */
+    }
+
+    .collection .col-md-3:nth-child(3) {
+        transform: translateY(0px);
+    }
+
+    .coll-box .btn-1 {
+        position: st;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -150%);
+        opacity: 1;
+        transition: all .5s;
+    }
+
+    .story-text .story-h,
+    .h-pro-text .story-h {
+        font-size: 26px;
+    }
+
+    .hotspot-text {
+        padding: 0 20px;
+    }
+
+    .armonia_franchise_awaits .th-h1 {
+        padding: 20px 0;
+    }
+
+    .armonia_franchise_awaits .carousel-indicators {
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        margin: 0;
+    }
+
+
+    .elevate_space .elevate_space_img img {
+        transform: translateY(0px);
+    }
+
+    .elevate_space .elevate_space_text {
+        padding: 20px 10px;
+    }
+
+    .elevate_space_text .th-p {
+        margin-top: 18px;
+    }
+
+    .elevate_space_text .btn-1 {
+        margin-top: 18px;
+    }
+
+    .elevate_space .th-h1 {
+        line-height: 30px;
+    }
+
+    .testimonal .th-h1 {
+        margin-bottom: 0;
+    }
+
+    .testimonal .col-md-5,
+    .testimonal .col-12 {
+        padding: 20px;
+    }
+
+
+    /* About Page  */
+    .intro-text-box .th-h1 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 30px;
+    }
+
+    .mission-text {
+        padding: 20px;
+        transform: translateX(0%);
+    }
+
+    .mission .mission-heading {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 32px;
+        /* 100% */
+        letter-spacing: 0.96px;
+    }
+
+    .mission-img {
+        padding: 0px;
+    }
+
+    .mission-img img {
+        margin-top: 0;
+        transform: scale(1);
+    }
+
+    .management {
+        padding: 0;
+    }
+
+    .manag-box {
+        flex-direction: column;
+    }
+
+    .manag-box img {
+        width: 100%;
+    }
+
+    .management .manag-text {
+        margin: 10px !important;
+    }
+
+    .management .manag-text .th-h1 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    .management .th-big-h {
+        margin-bottom: 30px;
+    }
+
+    .manag-text .th-h1 {
+        font-size: 18px;
+    }
+
+    .manag-text .th-p {
+        font-size: 14px;
+    }
+
+    /* .manag-tab {
+        position: static;
+    } */
+    .manag-right {
+        min-height: 276px;
+    }
+
+
+    .more-about-right {
+        padding: 20px;
+    }
+
+    .ft-u-img {
+        width: 65px;
+    }
+
+    .tran-space-right {
+        padding: 20px;
+    }
+
+    .bread_crumb {
+        padding-bottom: 10px;
+    }
+
+    .tran-space-right {
+        overflow: hidden;
+    }
+
+    .tran-your-space {
+        padding-top: 0;
+    }
+
+    .consultation-h {
+        padding-bottom: 0 !important;
+    }
+
+    .store-loc {
+        padding-top: 50px;
+    }
+
+    .store-search-box {
+        width: 90%;
+        padding: 10px 14px;
+        display: inline-block;
+    }
+
+    .store-search-box input {
+        width: 100%;
+    }
+
+    .store-loc-tab,
+    .category-tabs {
+        width: 100%;
+    }
+
+    .store-loc .loc-tab .loc-tab-btn,
+    .category-tabs li {
+        border: none;
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    .store-loc-btn,
+    .category-tabs-btn {
+        padding: 10px;
+        border: 1px solid var(--th-black);
+    }
+
+    .store-loc .loc-tab {
+        padding: 0px;
+    }
+
+    .store-loc-tab ul,
+    .category-tabs ul {
+        display: block;
+        border: 1px solid var(--th-black);
+    }
+
+    .loc-box {
+        margin-bottom: 30px;
+    }
+
+    .product-details .p-name {
+        margin-bottom: 20px;
+    }
+
+    .product-details .row {
+        margin-top: 15px;
+    }
+
+    .product-details .col-sm-8 {
+        margin-top: 10px;
+    }
+
+    .category-tabs li {
+        margin-top: 0%;
+        transition: all .5s;
+        padding: 10px;
+    }
+
+    .category-tabs li.active::after {
+        width: 0%;
+    }
+
+    .category-tabs {
+        margin-bottom: 20px;
+    }
+
+    .category-tabs li.active,
+    .category-tabs li:hover,
+    .category-tabs-btn.active,
+    .category-tabs-btn:hover {
+        background-color: var(--th-black);
+        color: var(--th-color-2);
+    }
+}
+
+
+/* Small devices (576px and down) */
+
+@media screen and (max-width: 576px) {}

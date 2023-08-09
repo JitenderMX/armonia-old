@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="product-details" id="productDetails">
+    <!-- Product details will be dynamically populated here -->
+  </div>
+
+  <script>
+//     // Sample product data (Replace this with your actual product data)
+// const products = {
+//   product123: { code: "product123", name: "Laptop", price: "$1000", description: "A high-performance laptop." },
+//   product456: { code: "product456", name: "T-shirt", price: "$20", description: "A comfortable t-shirt." },
+//   product789: { code: "product789", name: "Novel", price: "$15", description: "An interesting novel to read." },
+// };
+
+// function getProductData(productCode) {
+//   return products[productCode];
+// }
+
+// function displayProductDetails(product) {
+//   const productDetailsElement = document.getElementById("productDetails");
+//   productDetailsElement.innerHTML = `
+//     <h2>${product.name}</h2>
+//     <p><strong>Price:</strong> ${product.price}</p>
+//     <p><strong>Description:</strong> ${product.description}</p>
+//   `;
+// }
+
+// window.addEventListener("DOMContentLoaded", () => {
+//   const url = window.location.href;
+//   const productCode = url.split("#")[1];
+
+//   if (productCode) {
+//     const productData = getProductData(productCode);
+//     if (productData) {
+//       displayProductDetails(productData);
+//     } else {
+//       // Product not found
+//       const productDetailsElement = document.getElementById("productDetails");
+//       productDetailsElement.innerHTML = "<p>Product not found.</p>";
+//     }
+//   } else {
+//     // No product code in the URL
+//     const productDetailsElement = document.getElementById("productDetails");
+//     productDetailsElement.innerHTML = "<p>No product code in the URL.</p>";
+//   }
+// });
+// Sample product data (Replace this with your actual product data)
+const products = {
+  product123: { code: "product123", name: "Laptop", price: "$1000", description: "A high-performance laptop." },
+  product456: { code: "product456", name: "T-shirt", price: "$20", description: "A comfortable t-shirt." },
+  product789: { code: "product789", name: "Novel", price: "$15", description: "An interesting novel to read." },
+  // Add three random products below
+  productABC: { code: "productABC", name: "Headphones", price: "$50", description: "High-quality headphones with noise-cancellation." },
+  productXYZ: { code: "productXYZ", name: "Smartwatch", price: "$80", description: "A feature-packed smartwatch with health tracking." },
+  productDEF: { code: "productDEF", name: "Backpack", price: "$40", description: "A durable and spacious backpack for daily use." },
+};
+
+function getRandomProducts() {
+  // Get an array of product codes from the products object
+  const productCodes = Object.keys(products);
+
+  // Shuffle the product codes randomly
+  for (let i = productCodes.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [productCodes[i], productCodes[j]] = [productCodes[j], productCodes[i]];
+  }
+
+  // Return three random products
+  return productCodes.slice(0, 3).map(code => products[code]);
+}
+
+function getProductData(productCode) {
+  return products[productCode];
+}
+
+function displayProductDetails(product) {
+  const productDetailsElement = document.getElementById("productDetails");
+  productDetailsElement.innerHTML = `
+    <h2>${product.name}</h2>
+    <p><strong>Price:</strong> ${product.price}</p>
+    <p><strong>Description:</strong> ${product.description}</p>
+  `;
+
+  const randomProducts = getRandomProducts();
+  productDetailsElement.innerHTML += `
+    <h3>Random Products:</h3>
+    <ul>
+      ${randomProducts.map(p => `<li>${p.name} - ${p.price}</li>`).join("")}
+    </ul>
+  `;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const url = window.location.href;
+  const productCode = url.split("#")[1];
+
+  if (productCode) {
+    const productData = getProductData(productCode);
+    if (productData) {
+      displayProductDetails(productData);
+    } else {
+      // Product not found
+      const productDetailsElement = document.getElementById("productDetails");
+      productDetailsElement.innerHTML = "<p>Product not found.</p>";
+    }
+  } else {
+    // No product code in the URL
+    const productDetailsElement = document.getElementById("productDetails");
+    productDetailsElement.innerHTML = "<p>No product code in the URL.</p>";
+  }
+});
+
+  </script>
+</body>
+</html>

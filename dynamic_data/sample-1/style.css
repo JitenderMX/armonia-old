@@ -1,0 +1,21 @@
+.category-tabs {
+    margin-bottom: 20px;
+  }
+  
+  .category-tabs li {
+    display: inline-block;
+    padding: 10px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  .category-tabs li.active {
+    background-color: #ccc;
+  }
+  
+  .product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
