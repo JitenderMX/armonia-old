@@ -3,18 +3,18 @@ $(document).ready(function () {
     $("#footer").load("footer.html");
     $(window).scroll(function () {
         if ($(window).scrollTop() > 92) {
-            // $("header").css({
-            //     'background-color': 'rgba(255, 255, 255, 0.50)'
-            // })
+            $("header").css({
+                'background-color': 'rgba(255, 255, 255)'
+            })
             $()
             $("header img").css({
                 'width': '140px'
             })
         }
         else {
-            // $("header").css({
-            //     'background-color': 'rgba(255, 255, 255, 0.20)'
-            // })
+            $("header").css({
+                'background-color': 'rgba(255, 255, 255, 0.20)'
+            })
             $("header img").css({
                 'width': '221.871px'
             })
