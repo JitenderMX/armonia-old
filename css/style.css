@@ -261,6 +261,7 @@ section.banner {
     /* background-attachment: fixed; */
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: cover;
 }
 #banner .carousel-item:nth-child(1){
     background-image: url(../image/banner-1.png);
